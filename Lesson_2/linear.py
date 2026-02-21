@@ -101,19 +101,42 @@
 # else:
 #     print("NO")
 
+# x = int(input())
+# y = int(input())
+# z = int(input())
+
+# a = min(x, y, z)
+# c = max(x, y, z)
+# b = x + y + z - a - c
+
+# if c >= a + b:
+#     print("impossible")
+# elif c ** 2 > a ** 2 + b ** 2:
+#     print("obtuse")
+# elif c ** 2 == a ** 2 + b ** 2:
+#     print("right")
+# else:
+#     print("acute")
+
+# x = int(input())
+# while x % 2 == 0:
+#     x //= 2
+# if x == 1:
+#     print("YES")
+# else:
+#     print("NO")
+
+
+summ = 0
 x = int(input())
-y = int(input())
-z = int(input())
+last_odd = False
+while x != 0:
+    if last_odd:
+        summ += x
+    last_odd = x % 2 != 0
+    x = int(input())
 
-a = min(x, y, z)
-c = max(x, y, z)
-b = x + y + z - a - c
-
-if c >= a + b:
-    print("impossible")
-elif c ** 2 > a ** 2 + b ** 2:
-    print("obtuse")
-elif c ** 2 == a ** 2 + b ** 2:
-    print("right")
+if summ == 0:
+    print(-1)
 else:
-    print("acute")
+    print(summ)

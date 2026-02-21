@@ -94,10 +94,26 @@
 # else:
 #     print("NO")
 
-x = int(input())
+# x = int(input())
 
-if (99 < abs(x) 
-      and abs(x) < 1000):
-    print("YES")
+# if (99 < abs(x) < 1000):
+#     print("YES")
+# else:
+#     print("NO")
+
+x = int(input())
+y = int(input())
+z = int(input())
+
+a = min(x, y, z)
+c = max(x, y, z)
+b = x + y + z - a - c
+
+if c >= a + b:
+    print("impossible")
+elif c ** 2 > a ** 2 + b ** 2:
+    print("obtuse")
+elif c ** 2 == a ** 2 + b ** 2:
+    print("right")
 else:
-    print("NO")
+    print("acute")

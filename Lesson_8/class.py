@@ -114,3 +114,4 @@ t1 = time.time()
 qsort(A)
 t2 = time.time()
 print(t2 - t1)
+
